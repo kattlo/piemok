@@ -28,7 +28,7 @@ public interface MockedConsumer<K, V> {
     void reset(ProducerRecord<K, V> record);
 
     /**
-     * Returns the instance of {@link MockConsumer}
+     * Returns the instance of {@link KafkaConsumer}
      */
     MockConsumer<K, V> consumer();
 
