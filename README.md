@@ -22,7 +22,7 @@ Mocks for:
     }
 
     dependencies {
-	    testImplementation 'com.github.kattlo:piemok:v0.11.0'
+	    testImplementation 'com.github.kattlo:piemok:v0.12.0'
 	}
 
     ```
@@ -39,7 +39,7 @@ Mocks for:
 	<dependency>
 	    <groupId>com.github.kattlo</groupId>
 	    <artifactId>piemok</artifactId>
-	    <version>v0.11.0</version>
+	    <version>v0.12.0</version>
 	</dependency>
     ```
 
