@@ -1,6 +1,8 @@
 plugins {
     id 'com.commercehub.gradle.plugin.avro' version '0.99.99'
+    id 'java'
     id 'java-library'
+    id 'maven'
 }
 
 repositories {
@@ -44,3 +46,37 @@ avro {
 }
 
 sourceSets.main.java.srcDirs += 'build/generated-main-avro-java'
+
+task sourcesJar(type: Jar, dependsOn: classes) {
+    classifier = 'sources'
+    from sourceSets.main.allSource
+}
+
+task javadocJar(type: Jar, dependsOn: javadoc) {
+    classifier = 'javadoc'
+    from javadoc.destinationDir
+}
+
+artifacts {
+    archives sourcesJar
+    archives javadocJar
+}
+
+install {
+  repositories.mavenInstaller {
+    pom.project {
+      licenses {
+        license {
+          name 'The Apache Software License, Version 2.0'
+          url 'http://www.apache.org/licenses/LICENSE-2.0.txt'
+          distribution 'repo'
+        }
+      }
+    }
+  }
+}
+
+wrapper {
+    gradleVersion = "6.1.1"
+    distributionType = Wrapper.DistributionType.ALL
+}
