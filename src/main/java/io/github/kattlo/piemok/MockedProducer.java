@@ -22,7 +22,7 @@ public class MockedProducer {
     public static <K, V> MockProducer<K, V> create(boolean autoComplete,
         Serializer<K> keySerializer, Serializer<V> valueSerializer) {
 
-        return new MockProducer<>();
+        return new MockProducer<>(autoComplete, keySerializer, valueSerializer);
     }
 
 }
