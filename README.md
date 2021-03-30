@@ -4,8 +4,6 @@ _Are you tired to run an Apache Kafka® broker for unit testing?_
 
 Use 🥧 Piemok and run tests faster.
 
-- 💡 [See examples](./examples)
-
 Mocks for:
 
 - [Producer API](http://kafka.apache.org/documentation/#producerapi)
