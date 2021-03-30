@@ -4,11 +4,18 @@ _Are you tired to run an Apache Kafka® broker for unit testing?_
 
 Use 🥧 Piemok and run tests faster.
 
+- 💡 [See examples](./examples)
+
 Mocks for:
 
-- Producer API
-- Consumer API
-- Schema Registry
+- [Producer API](http://kafka.apache.org/documentation/#producerapi)
+- [Consumer API](http://kafka.apache.org/documentation/#consumerapi)
+- Confluent® [Schema Registry](https://docs.confluent.io/platform/current/schema-registry/index.html)
+
+__Support:__
+
+- Java 11+
+- Apache Kafka® 2.6.0+
 
 ## Getting Started
 
@@ -18,6 +25,11 @@ Mocks for:
     ```groovy
     repositories {
         // ...
+
+        maven {
+            url = uri('http://packages.confluent.io/maven/')
+        }
+
         maven { url 'https://jitpack.io' }
     }
 
@@ -108,13 +120,15 @@ public class MyTestByAssignment {
 }
 ```
 
-5. To test code with Kafka Avro Serializer
+5. To test code with Kafka Avro Serializer, if you are running an embedded
+   Apache Kafka® or using Testcontainers.
 ```properties
 value.serializer=io.github.kattlo.piemok.MockedKafkaAvroSerializer
 # . . .
 ```
 
-6. Use to test code with Kafka Avro Deserializer
+6. Use to test code with Kafka Avro Deserializer, if you are running and embedded
+   Apache Kafka® or using Testcontainers.
 ```properties
 value.deserializer=io.github.kattlo.piemok.MockedKafkaAvroDeserializer
 # . . .
