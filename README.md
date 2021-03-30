@@ -34,7 +34,7 @@ __Support:__
     }
 
     dependencies {
-	    testImplementation 'com.github.kattlo:piemok:v0.12.0'
+	    testImplementation 'com.github.kattlo:piemok:v0.13.0'
 	}
 
     ```
@@ -51,7 +51,7 @@ __Support:__
 	<dependency>
 	    <groupId>com.github.kattlo</groupId>
 	    <artifactId>piemok</artifactId>
-	    <version>v0.12.0</version>
+	    <version>v0.13.0</version>
 	</dependency>
     ```
 
