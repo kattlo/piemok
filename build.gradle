@@ -14,7 +14,7 @@ repositories {
 }
 
 dependencies {
-    implementation 'org.apache.kafka:kafka_2.12:2.7.0'
+    implementation 'org.apache.kafka:kafka_2.12:6.2.1-ce'
     implementation 'io.confluent:kafka-avro-serializer:5.5.0'
     implementation 'org.apache.avro:avro:1.10.2'
 
